@@ -5,7 +5,7 @@ from google import genai
 
 # Kalitlaringizni shu yerga kiriting
 BOT_TOKEN = "8948827233:AAGsqPrqPaATw_2wq7YhxWV8Kbssj8Nm2mw"
-GEMINI_API_KEY = "GEMINI_API_KALITINGIZNI_YOZING"
+GEMINI_API_KEY = "AQ.Ab8RN6Kp4NBsjTryHJbK6oCDG0K65Z1j2uhTUAXb2C68gyTgYA"
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
@@ -38,7 +38,7 @@ async def handle_business_message(message: types.Message):
         )
 
         response = ai_client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.8-flash",
             contents=message.text,
             config={
                 "system_instruction": SYSTEM_INSTRUCTION,
